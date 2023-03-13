@@ -1,0 +1,118 @@
+
+header.active,
+header:hover{
+    background-color:#210a2e ;
+}
+
+.logo{
+    width: 20%;
+    font-size: 30px;
+    letter-spacing: 8px;
+    -webkit-text-stroke: 1px white;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.logo span{
+    display: inline-block;
+}
+
+.logo span:nth-child(1){
+    font-size: 40px;
+    -webkit-text-fill-color: red;
+    transform: rotate(-10deg);
+
+}
+.logo span:nth-child(2){
+    -webkit-text-fill-color: green;
+    transform: rotate(15deg);
+
+
+}
+.logo span:nth-child(3){
+    -webkit-text-fill-color: yellow;
+    transform: rotate(-10deg);
+
+
+}
+.logo span:nth-child(4){
+    -webkit-text-fill-color: orange;
+    transform: rotate(-5deg);
+}
+
+header .nav{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+header .nav li{
+    cursor: pointer;
+    width: 15%;
+    padding: 10px 0;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    position: relative;
+}
+
+header .category{
+    display: none;
+}
+
+header .nav li.active::before{
+    content: '';
+    width: 40%;
+    height: 2px;
+    border-radius: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color:white;
+    opacity: 1;
+}
+
+
+header .nav li:hover{
+
+}
+header button:hover{
+    opacity: 0.7;
+}
+
+header .btnSource{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    background:#5c0c88;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+button:hover{
+    transform: translate(1px,1px);
+    color: #b35de2;
+}
+
+button ion-icon{
+    font-size: 16px;
+    width: 30px;
+}

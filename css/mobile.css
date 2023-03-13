@@ -1,0 +1,169 @@
+@media screen and (max-width:768px) {
+    header .nav,
+    header .btnSource{
+        display: none;
+    }
+
+    header .nav.active{
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: rgba(0,0,0,0.4);
+        display: block;
+        width: 100%;
+       
+    }
+    
+    header #show{
+        display: block;
+    }
+    header .nav.active li:nth-child(1){
+        padding-top : 10%;
+    }   
+    header .nav.active li{
+        width: 100%;
+        background:rgba(0,0,0,0.8);
+        color: white;
+        padding: 20px 0;
+        animation: showMenu 0.5s ease-out forwards;
+        transform: translateY(-500px);
+    }
+
+        
+    @keyframes showMenu {
+        100%{
+            transform: translateY(0);
+        }
+    }
+    
+    header .nav.active ~ #show{
+        display: none;
+    }
+    header .nav.active ~ #close{
+        display: block;
+    }
+
+    header .logo{
+        width: 50%;
+        text-align: unset;
+        position: absolute;
+        left: 10%;
+    }
+
+    header .category{
+        font-size: 50px;
+        color: white;
+        cursor: pointer;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    /* main */
+    main .home .rotate,
+    main .home .contentMain button:nth-child(2){
+        display: none;
+    }
+    main .home .contentMain h2{
+        font-size: 20px;
+        width: 100%;
+    }
+    main .home .contentMain p{
+        font-size: 12px;
+    }
+    
+    .contentMain .btnMain .btnSource,
+    footer .license{
+        font-size: 12px!important;
+        padding: 6px 10px!important;
+
+    }
+    .contentMain .btnMain .btnSource ion-icon{
+        font-size: 14px;
+        padding: 0;
+    }
+    
+
+    /* setttings */
+    main .settings .title,
+    main .contact .title{
+        font-size: 24px;
+
+    }
+    
+    main .settings  p,
+    main .settings .copy input{
+       font-size: 12px;
+    }
+
+    main .settings .copy{
+        width: 100%!important;
+    }
+    
+    .settings ul li .subTitle{
+        font-size: 16px;
+    }
+    .settings .copy label{
+        top: 3px;
+    }
+
+    main .contact{
+        width: 80%;
+    }
+    .contact .form button{
+        width: 100%;
+    }
+    .team .titleTeam{
+        font-size: 30px;
+        margin: 20px 0;
+    }
+    /* footer */
+    footer .contentFooter{
+        font-size: 12px;
+        justify-content: space-between!important;
+        width: 100%;
+    }
+    footer .infoFooter,
+    footer .summaryFooter,
+    footer .contactFooter{
+        width: 50%;
+        padding: 10px;
+    }
+    footer .contactFooter{
+        order: 3;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width:1024px){
+    header .nav {
+        width: 50%;
+    }
+    header .nav li{
+        font-size: 12px!important;
+        width: max-content;
+        margin: 0 14px;
+    }
+    header .logo{
+        width: 25%;
+        font-size: 20px;
+        /* position: absolute; */
+        /* left: 10px; */
+    }
+    header  button{
+        font-size: 12px!important;
+    }
+    
+    main .settings .copy{
+        width: 100%;
+    }
+    footer .contentFooter li,
+    footer .contentFooter p,
+    footer .license{
+        font-size: 12px!important;
+    }
+    
+}

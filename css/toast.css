@@ -1,0 +1,72 @@
+#snackbar{
+    display: flex;
+}
+#snackbar{
+    visibility: hidden; 
+    width: 300px;
+    text-align: justify;
+    background-color: white; 
+    color: black; 
+    border-radius: 4px; 
+    padding: 10px; 
+    position: fixed; 
+    z-index: 100000000000000000;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 30px; 
+    font-size: 14px;
+  }
+  
+  #snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+
+  /* duration */
+#snackbar span{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: orange;
+    bottom: 0;
+    left: 0;
+}
+#snackbar.show span{
+    animation: hideToast 2.5s linear forwards;
+}
+@keyframes hideToast{
+    100%{
+        width: 0;
+    }
+}
+  
+  /* Animations to fade the snackbar in and out */
+  @-webkit-keyframes fadein {
+    from {top: 0; opacity: 0;}
+    to {top: 30px; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+    from {top: 0; opacity: 0;}
+    to {top: 30px; opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {top: 30px; opacity: 1;}
+    to {top: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+    from {top: 30px; opacity: 1;}
+    to {top: 0; opacity: 0;}
+  }
+
+  #snackbar ion-icon{
+    display: block;
+    width: 20%;
+    margin: auto 10px auto 0;
+    font-size: 20px;
+    color: orange;
+  }

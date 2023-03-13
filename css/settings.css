@@ -1,0 +1,86 @@
+
+main .settings{
+    width: 90%;
+    min-height: 100%;
+    overflow: hidden;
+    background: rgba(0,0,0,0.1);
+    border-radius: 10px;
+    padding: 2% 12%;
+    margin: 10px 0 20px 0;
+    display: none;
+}
+
+
+main .settings .title{
+    width: 100%;
+    /* text-align: center; */
+    font-size: 30px;
+    /* -webkit-text-stroke: 0.8px white;
+    -webkit-text-fill-color: transparent; */
+    letter-spacing: 6px;
+    font-weight: bold;
+}
+
+main .settings .started > p{
+    text-align: justify;
+    margin: 20px 0;
+}
+
+main .settings .started,
+main .settings .install{
+    margin-bottom: 50px;
+}
+
+main .settings ul li{
+    margin: 20px 0;
+}
+
+.settings ul li .subTitle{
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.settings ul li > p{
+    margin: 6px 0;
+}
+
+/* coppy */
+main .settings .copy{
+    width: 60%;
+    position: relative;
+    border-radius: 4px;
+    /* overflow: hidden; */
+    background: rgba(0,0,0,0.3);
+    margin: 10px 0;
+}
+
+main .settings .copy input{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    font-size: 20px;
+    padding: 10px 20px;
+}
+
+.settings .copy label{
+    cursor: pointer;
+    position: absolute;
+    right: 6px;
+    top: 6px;
+    font-size: 30px;
+}
+
+.settings .copy.active label::before{
+    content: 'Copied';
+    font-size: 14px;
+    background-color: green;
+    border-radius: 20px;
+    padding: 4px 10px;
+    position: absolute;
+    top: -40px;
+    left: -50%;
+}

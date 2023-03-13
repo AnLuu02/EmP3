@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/settings.css">
+    <link rel="stylesheet" href="./css/group.css">
+    <link rel="stylesheet" href="./css/contact.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/mobile.css">
+    <link rel="stylesheet" href="./css/toast.css">
+    <title>EmP3</title>
+</head>
+<body>
+    <div id="snackbar">
+        <ion-icon name="warning-outline"></ion-icon>
+        <div class="text">
+            Ứng dụng đang trong quá trình phát triển. Vui lòng quay lại sau...
+            <span></span>
+        </div>
+    </div>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <span>E</span><span>m</span><span>P</span><span>3</span>
+            </div>
+            <ul class="nav">
+                <li onclick="home(event)" class="active">Trang chủ</li>
+                <li onclick="settings(event)">Cài đặt</li>
+                <li onclick="contact(event)">Liên hệ</li>
+                <li onclick="group(event)">Nhóm</li>
+            </ul>
+            <div class="btnSource" onclick="showToast()"><button><ion-icon name="cloud-download-outline"></ion-icon>TẢI XUỐNG</button></div>
+
+            <div class="category" id="show"><ion-icon name="menu-outline"></ion-icon></div>
+            <div class="category" id="close"><ion-icon name="close-outline"></ion-icon></div>
+
+        </header>
+
+        <main>
+            <div class="home">
+                <div class="rotate"><ion-icon name="musical-notes-outline"></ion-icon></div>
+                <div class="contentMain">
+                    <h2 class="aim">Lựa chọn nghe nhạc hoàn mỹ của bạn</h2>
+                    <p class="aim">Ứng dụng nghe nhạc hot nhất trên Linux</p>
+                    <div class="btnMain aim">
+                        <button class="btnSource" onclick="showToast()"><ion-icon name="cloud-download-outline"></ion-icon><span>TẢI XUỐNG</span></button>
+                        <button class="btnSource" onclick="showToast()"><span>XEM THÊM</span><ion-icon name="caret-forward-outline"></ion-icon></button>
+                    </div>
+                </div>
+            </div>
+            <div class="settings">
+               <div class="started">
+                    <div class="title">GETTING STARTED</div>
+                    <p>EmP3 là một ứng dụng nghe nhạc được phát triển bằng ngôn ngữ lập trình Python chạy trên nền của hệ điều hành Linux (Ubuntu). 
+                        Để sử dụng được ứng dụng, bạn cần chắc chắn rằng bạn đã và đang sử dụng hệ điều hành linux (cụ thể là Ubuntu). Nếu đây là lần đầu sử dụng của bạn, hãy thực hiện các bước cài đặt dưới đây: </p>
+                    <ul>
+                        <li>
+                            <div class="subTitle">1. Cài đặt môi trường Python</div>
+                            <p>Mở command line và chạy dòng lệnh này để cài đặt Python 3</p>
+                            <div class="copy">
+                                <input type="text" value="sudo apt-get install python3" id="copy" readonly="False">
+                                <label for="copy"><ion-icon name="copy-outline"></ion-icon></label>
+                            </div>
+                        </li>
+                    </ul>
+               </div>
+
+               <div class="install">
+                    <div class="title">INSTALL APP</div>
+                    Loading....
+               </div>
+
+               <div class="running">
+                    <div class="title">RUNNING APP</div>
+                    Loading....
+               </div>
+            </div>
+
+            <div class="team">
+                <div class="titleTeam"><b style="color: red;">E</b><b style="color: green;">m</b><b style="color: yellow;">P</b><b style="color: orange;">3</b> TEAM</div>
+                <div class="listCard">
+                    <div class="card">
+                        <div class="card__img">
+                            <img src="1.jpg" alt="" />
+                        </div>
+                        <h2>Luu Truong An</h2>
+                        <p>Web Developer</p>
+                        <div class="card__social">
+                            <a target="_black" href="">
+                                <ion-icon name="logo-facebook"></ion-icon>
+                            </a>
+                            <a target="_black" href="">
+                                <ion-icon name="logo-github"></ion-icon>
+                            </a>
+                        </div>
+                        <button onclick="showToast()">Contact me</button>
+                    </div>
+                    <div class="card">
+                        <div class="card__img">
+                            <img src="1.jpg" alt="" />
+                        </div>
+                        <h2>Vi Đào Tiến Đạt</h2>
+                        <p>Web Developer</p>
+                        <div class="card__social">
+                            <a target="_black" href="">
+                                <ion-icon name="logo-facebook"></ion-icon>
+                            </a>
+                            <a target="_black" href="">
+                                <ion-icon name="logo-github"></ion-icon>
+                            </a>
+                        </div>
+                        <button onclick="showToast()">Contact me</button>
+                    </div>
+                    <div class="card">
+                        <div class="card__img">
+                            <img src="1.jpg" alt="" />
+                        </div>
+                        <h2>Nguyễn Triều Anh</h2>
+                        <p>Web Developer</p>
+                        <div class="card__social">
+                            <a target="_black" href="">
+                                <ion-icon name="logo-facebook"></ion-icon>
+                            </a>
+                            <a target="_black" href="">
+                                <ion-icon name="logo-github"></ion-icon>
+                            </a>
+                        </div>
+                        <button onclick="showToast()">Contact me</button>
+                    </div>
+                    <div class="card">
+                        <div class="card__img">
+                            <img src="1.jpg" alt="" />
+                        </div>
+                        <h2>Nguyễn Mạnh Tường</h2>
+                        <p>Web Developer</p>
+                        <div class="card__social">
+                            <a target="_black" href="">
+                                <ion-icon name="logo-facebook"></ion-icon>
+                            </a>
+                            <a target="_black" href="">
+                                <ion-icon name="logo-github"></ion-icon>
+                            </a>
+                        </div>
+                        <button onclick="showToast()">Contact me</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact">
+                <div class="title">
+                    CONTACT
+                </div>
+                <div class="form">
+                    <div class="nameInput">
+                        <label for="userName"><ion-icon name="person-circle-outline"></ion-icon></label>
+                        <input type="text" placeholder="Nhập họ tên của bạn" id="userName">
+                    </div>
+
+                    <div class="emailInput">
+                        <label for="userEmail"><ion-icon name="mail-outline"></ion-icon></label>
+                        <input type="email" placeholder="Nhập email của bạn" id="userEmail">
+                    </div>
+
+                    <div class="reasonInput">
+                        <label for="reasonInput"><ion-icon name="help-circle-outline"></ion-icon></label>
+                        <textarea id="reasonInput" name="w3review" rows="4" cols="50"></textarea>
+                    </div>
+                    <button>
+                        <ion-icon name="arrow-redo-outline"></ion-icon> GỬI YÊU CẦU
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="contentFooter">
+                <div class="infoFooter">
+                    <div class="logo logoFooter">
+                        <span>E</span><span>m</span><span>P</span><span>3</span>
+                    </div>
+                    <p class="desFooter">
+                        Ứng dụng được phát triển dựa trên nhu cầu nghe nhạc của người dùng trên hệ điều hành linux.
+                    </p>
+                    <div class="socialFooter">
+                        <a href="https://facebook.com" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
+                        <a href="https://github.com" target="_blank"><ion-icon name="logo-github"></ion-icon></a>                   
+                    </div>
+                </div>
+                <div class="summaryFooter">
+                    <h3 class="titleFooter">Nội dụng</h3>
+                    <ul>
+                        <li>Trang giới thiệu</li>
+                        <li>Hướng dẫn cài đặt</li>
+                        <li>Thông tin nhóm</li>
+                    </ul>
+                </div>
+                <div class="contactFooter">
+                    <h3 class="titleFooter">Thông tin liên hệ</h3>
+
+                    <ul>
+                        <li>
+                            <ion-icon name="call-outline"></ion-icon>
+                            +84 18064618
+                        </li>
+                        <li>
+                            <ion-icon name="mail-outline"></ion-icon>
+                            anluu099@gmail.com
+                        </li>
+                        <li>
+                            <ion-icon name="location-outline"></ion-icon>
+                            273 An Dương Vương, Quận 5, Tp. HCM
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="license">
+                Website đang được phát triển bởi <b style="color: red;font-size: 16px;">E</b><b style="color: green;font-size: 16px">m</b><b style="color: yellow;font-size: 16px">P</b><b style="color: orange;font-size: 16px">3</b> Team
+            </div>
+        </footer>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+main .home{
+    position: relative;
+    width: 100%;
+    padding: 15% 12% 10% 12%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    mix-blend-mode: luminosity; 
+    transform: translateY(-10%);
+    overflow: hidden;
+}
+main .home .rotate{
+    position: absolute;
+    right: 10%;
+    width: 500px;
+    height: 500px;
+    background:linear-gradient(to right bottom,red,pink);
+    border-radius: 50%;
+    transform: rotate(0);
+    animation: rotate 2s linear infinite;
+    text-align: center;
+    line-height: 500px;
+    font-size: 150px;
+    color: white;
+}
+
+@keyframes rotate{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+main .home .contentMain{
+    width: 100%;
+
+}
+
+main .home .contentMain h2{
+    font-size: 50px;
+    width: 50%;
+    margin-bottom: 10px;
+    transform: translate(-30px);
+    opacity: 0;
+    animation-delay: 0.2s;
+}
+main .home .contentMain p{
+    font-size: 20px;
+    margin: 10px 0;
+    transform: translate(-30px);
+    opacity: 0;
+    animation-delay: 0.4s;
+
+}
+
+main .home .contentMain .btnMain{
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    transform: translate(-30px);
+    opacity: 0;
+    animation-delay: 0.8s;
+
+}
+main .home .contentMain button{
+    padding: 10px 20px;
+    border-radius: 4px;
+    margin-right: 4px;
+}
+
+
+.aim{
+    animation: show 1s ease-in-out forwards;
+}
+
+@keyframes show{
+    100%{
+        transform: translate(0);
+        opacity: 1;
+    }
+}
